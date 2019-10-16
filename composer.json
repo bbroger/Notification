@@ -1,0 +1,26 @@
+{
+    "name": "micronovo/notification",
+    "description": "This is a library that uses composer as the basis for generating email notifications",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Andre Camargo",
+            "email": "andre.camargo@msn.com",
+            "homepage": "https://www.webinfluencer.com.br",
+            "role": "Developer"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {
+        "phpmailer/phpmailer": "6.1"
+    },
+    "config": {
+        "vendor-dir": "_app/lib_ext"
+    },
+    "autoload": {
+        "psr-4": {
+            "Notification\\": "_app"
+        }
+    }
+}
