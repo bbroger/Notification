@@ -64,14 +64,14 @@ class Email{
         else if($type === 'email')
         {
             $regex = '/^[_a-z0-9-]+(\.[_a-z0-9-]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,3})$/';
-            $res = preg_match("{$regex}", "{$field}");
+            $res = strip_tags(trim(preg_match("{$regex}", "{$field}")));
         }
         else if($type === 'tags')
         {
             $res = true;
             $allowedTags = '<p><strong><em><u><h1><h2><h3><h4><h5><h6><img><a><blockquote>';
             $allowedTags .= '<li><ol><ul><span><br><b><ins><del><blockquote><hr><table><tbody><tr><td>';
-            $field = strip_tags(stripslashes(trim($field)), $allowedTags);
+            $field = strip_tags(trim(stripslashes($field)), $allowedTags);
         }
         if($res){
             return $field;
