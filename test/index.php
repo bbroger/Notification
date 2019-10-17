@@ -17,9 +17,9 @@ $mail = new Email(
 
 $mail->sendEmail(
     'E-mail de teste',
-    '<p>Testando envio de E-mail com <b>phpMailer</b></p>',
+    '<p>Testando envio de <em>E-mail</em> com <b>phpMailer</b> .</p>',
     'andre.camargo@msn.com',
     'André Camargo',
-    'andre.camargo@msn.com',
-    'André'
+    'website@liderbalancas.com.br',
+    'Web site líder'
 );
